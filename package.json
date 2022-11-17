@@ -1,7 +1,7 @@
 {
   "name": "epp",
   "version": "0.1.0",
-  "homepage": "https://14g0.github.io/epp",
+  "homepage": "https://14g0.github.io/Epp",
   "private": true,
   "dependencies": {
     "@fontsource/poppins": "^4.5.10",
