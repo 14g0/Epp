@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { global } from '../../globalStyles';
 
-export const Container = styled.div `
+export const HomeContainer = styled.div `
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -16,7 +16,7 @@ export const Board = styled.img `
     height: 22.63vh;
     min-width: 340px;
     min-height: 192px;
-    padding-top: 11vh;
+    padding-top: 10vh;
 
     border-radius: 4.5vw;
 `;
@@ -40,13 +40,13 @@ export const HomeFooter = styled.footer `
 
 export const SearchBar = styled.div `
     display: flex;
-    flex-shrink: 0;
     height: 6vh;
     width: 75.89vw;
     min-width: 296px;
     min-height: 50px;
 
-    margin: 15% 0;
+    margin-top: 15%;
+    margin-bottom: 10%;
 
     align-items: center;
     justify-content: space-evenly;

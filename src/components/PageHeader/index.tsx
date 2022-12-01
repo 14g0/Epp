@@ -1,25 +1,74 @@
-import React from "react";
-import { ActionDiv, BackButton, ButtonDiv,
-    CheckButton, FavoriteButton, HeaderDiv } from "./style";
+import IconButton from "../IconButton";
+import NavPeriodo from "../NavPeriodo";
+import { ActionDiv, ButtonDiv, HeaderDiv, HeaderTitle, TitleDiv } from "./style";
+
 
 type info = {
     title?: string;
-    isFavorite?: boolean;
-    isDone?: boolean;
+    actiondiv?: boolean;
+    switchDisp?: boolean;
+    backButton?: boolean;
+    minheight?: string;
+    
+    navType?: any;
+    setP?: any;
+    increaseP?: any;
+    decreaseP?: any;
+    goback?: any;
 };
 
 export default function PageHeader(
-    {title, isFavorite, isDone}: info
+    {title, actiondiv, setP, switchDisp, goback,
+    increaseP, decreaseP, navType, minheight}: info
 ) {
     return(
-        <HeaderDiv>
+        <HeaderDiv style={{minHeight: `${minheight}`}}>
             <ButtonDiv>
-                <BackButton src={require('../../assets/Back.png')}/>
+                <IconButton
+                imgpath="Back.png"
+                bttw="9.7vw"
+                bdradius="8vw"
+                bshadow="none"
+                turnOn
+                back={goback}/>
+
                 <ActionDiv>
-                    <FavoriteButton src={require('../../assets/Favoritar.png')}/>
-                    <CheckButton src={require('../../assets/Check.png')}/>
+                    <IconButton
+                    imgpath="Check.svg"
+                    bttw="9vw"
+                    bdradius="8vw"
+                    bshadow="none"
+                    turnOn={actiondiv}/>
+
+                    <IconButton
+                    imgpath="Favoritar.png"
+                    bttw="8.5vw"
+                    bshadow="none"
+                    turnOn={actiondiv}/>
                 </ActionDiv>
             </ButtonDiv>
+
+            <TitleDiv>
+                <IconButton
+                imgpath="SwitchLeft.svg"
+                btth="3.4vh"
+                bshadow="none"
+                changePeriodo={decreaseP}
+                turnOn={switchDisp}/>
+                
+                <HeaderTitle>{title}</HeaderTitle>
+
+                <IconButton
+                imgpath="SwitchRight.svg"
+                btth="3.4vh"
+                bshadow="none"
+                changePeriodo={increaseP}
+                turnOn={switchDisp}/>
+            </TitleDiv>
+
+            <NavPeriodo
+            setPeriodo={setP}
+            switchDisp={navType}/>
         </HeaderDiv>
     );
 };

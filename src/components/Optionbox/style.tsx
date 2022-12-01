@@ -2,13 +2,11 @@ import styled from "styled-components";
 
 export const OptionView = styled.button `
     display: flex;
-    flex-shrink: 0;
-    height: 6vh;
     width: 75.89vw;
     min-width: 296px;
-    min-height: 50px;
+    min-height: 6.7vh;
 
-    margin: 4% 0;
+    margin: 5% 0;
 
     align-items: center;
     justify-content: center;
@@ -27,6 +25,7 @@ export const OptionView = styled.button `
 
 export const OptionText = styled.text `
     display: flex;
+    max-width: 90%;
     color: white;
     font-size: 4.5vw;
 `;

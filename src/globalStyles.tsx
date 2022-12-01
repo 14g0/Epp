@@ -5,6 +5,7 @@ export const global = {
         azul1: '#0035BA',
         azul2: '#002276',
         azul3: '#00164D',
+        azulclaro: '#6892FF',
         cinza1: '#dfdfdf',
         cinza2: '#b5b5b5',
     },

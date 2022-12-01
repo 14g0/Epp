@@ -3,56 +3,56 @@ import { global } from "../../globalStyles";
 
 export const HeaderDiv = styled.div `
     display: flex;
+    flex-direction: column;
     width: 100vw;
-    height: 26.2vh;
-    
-    background-color: ${global.colors.azul1};
+    min-height: 24vh;
+    margin-bottom: 6vh;
+    position: fixed;
 
+    align-items: center;
+    
     border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.45);
+
+    background-color: ${global.colors.azul1};
 `;
 
 export const ButtonDiv = styled.div `
     display: inline-flex;
-    width: 100%;
-    height: 10%;
+    width: 90%;
+    margin-top: 5vh;
 
-    background: red;
-
-    align-items: center;
     justify-content: space-between;
 `;
 
 export const ActionDiv = styled.div `
     display: flex;
-    height: 100%;
-
-    background: aqua;
+    width: 25%;
+    justify-content: space-between;
 `;
+
+export const TitleDiv = styled.div `
+    display: inline-flex;
+    width: 100%;
+    height: 50px;
+    margin-top: 4vh;
+
+    align-items: center;
+    justify-content: space-evenly;
+`
 
 /*------------------------------------------------------------*/
 
-export const BackButton = styled.img `
+export const HeaderTitle = styled.text `
     display: flex;
-    width: 20px;
-    height: 20px;
-`;
+    width: 75.9vw;
 
-export const FavoriteButton = styled.img `
-    display: flex;
-    width: 20px;
-    height: 20px;
-`;
+    font-family: ${global.fonts.normal};
+    font-size: 7vw;
 
-export const CheckButton = styled.img `
-    display: flex;
-    width: 20px;
-    height: 20px;
-`;
+    text-align: center;
+    justify-content: center;
+    line-height: 9vw;
 
-/*----------------------------------------*/
-
-export const HeadName = styled.text `
-    display: flex;
-    width: 100%;
-    height: 100%;
-`;
+    color: white;
+`; 
