@@ -1,4 +1,4 @@
-<img src='Logo.png' width='400' height='auto' align='right'>
+<img src='readme_assets/Logo.png' width='400' height='auto' align='right'>
 
 # E++
 [![My Skills](https://skills.thijs.gg/icons?i=react,js,ts,css)](https://skills.thijs.gg)
