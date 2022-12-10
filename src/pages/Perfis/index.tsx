@@ -4,6 +4,7 @@ import { FillDiv, PerfilContainer } from './style';
 import { HomeContainer } from "../Home/style";
 import OptionBox from "../../components/Optionbox";
 import { global } from "../../globalStyles";
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Perfis() {
@@ -36,6 +37,8 @@ export default function Perfis() {
         }
     }
 
+    const nav = useNavigate();
+
     return(
         <PerfilContainer>
             <FillDiv/>
@@ -46,7 +49,8 @@ export default function Perfis() {
             decreaseP={minusPerfil}
             navType={'2'}
             switchDisp
-            minheight='27vh'/>
+            minheight='27vh'
+            goback={() => nav(-1)}/>
 
             <HomeContainer style={{
                 display: perfil==='1'?'flex':'none'
